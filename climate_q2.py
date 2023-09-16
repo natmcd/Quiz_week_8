@@ -1,6 +1,10 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
+df = pd.read_csv(r".\climate.csv")
+df.index = RangeIndex(start=0, stop=10, step=1)
+df.columns['Year', 'CO2', 'Temperature']
+
 years = []
 co2 = []
 temp = []
