@@ -1,8 +1,16 @@
 import matplotlib.pyplot as plt
-        
-years = []
-co2 = []
-temp = []
+import sqlite3
+
+connection = sqlite3.connect(climate.db)
+cursor = connection.cursor()
+
+cursor.execute("SELECT * FROM ClimateData")
+print("fetchall;")
+
+
+years = ["SELECT Year FROM ClimateData"]
+co2 = ["SELECT CO2 FROM ClimateData"]
+temp = ["SELECT Temperature FROM ClimateData"]
 
 plt.subplot(2, 1, 1)
 plt.plot(years, co2, 'b--') 
